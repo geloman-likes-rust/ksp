@@ -1,0 +1,97 @@
+.page {
+  padding: 20px;
+  user-select: none;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  max-width: 1350px;
+  min-height: 100vh;
+  outline: 1px solid green;
+  margin-inline: auto;
+  position: relative;
+}
+
+.sidebar_wrapper {
+  align-self: start;
+  flex-shrink: 0;
+  flex-grow: 0;
+  top: 20px;
+  outline: 1px solid black;
+  height: 90vh;
+  border-radius: 5px;
+  width: 300px;
+  position: sticky;
+}
+
+.grid {
+  display: grid;
+  align-self: start;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  list-style: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 
+  rgba(0, 0, 0, 0.07) 0px 1px 2px,
+  rgba(0, 0, 0, 0.07) 0px 2px 4px, 
+  rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+  rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+  rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+  rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.card .image {
+  margin-block: 20px;
+  height: 150px;
+  justify-content: center;
+  display: flex;
+}
+
+.card .image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 100%;
+  color: #222831;
+}
+
+.details .primary {
+  padding: 10px 20px;
+}
+
+.details .primary .label {
+  letter-spacing: 1px;
+}
+
+.details .secondary {
+  display: flex;
+  flex-direction: column;
+}
+
+.details .secondary .price {
+  padding: 10px 20px;
+  align-self: end;
+}
+
+.details .secondary .order_now {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 20px;
+  background: #820000;
+  color: #DDDDDD;
+}
