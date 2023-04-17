@@ -23,7 +23,7 @@ export default function Home({ menu }: Props) {
         {menu.map((item) => {
           return (
             <li key={item.param} className={style.item}>
-              <Link href="#">
+              <Link href={item.param}>
                 <div className={style.card}>
                   <div className={style.image}>
                     <img src={item.image} alt={item.category} />
