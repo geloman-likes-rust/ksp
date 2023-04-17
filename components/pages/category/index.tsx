@@ -1,5 +1,7 @@
+import Sidebar from "@/components/ui/sidebar"
 import style from "./style.module.css"
 import { Roboto } from "next/font/google"
+import { useRouter } from "next/router"
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -7,7 +9,7 @@ const roboto = Roboto({
 })
 
 type Props = {
-  category: {
+  categoryItems: {
     id: number
     img: string
     label: string
@@ -21,14 +23,18 @@ type Props = {
   }[]
 }
 
-export default function Category({ menu, category }: Props) {
+export default function Category({ menu, categoryItems }: Props) {
+  const router = useRouter()
+  const { category } = router.query
   return (
     <div className={`${style.page} ${roboto.className}`}>
       <div className={style.menu}>
-        <div className={style.sidebar_wrapper}></div>
+        <div className={style.sidebar_wrapper}>
+          <Sidebar activeLink={String(category)} menu={menu} />
+        </div>
         <ul className={style.grid}>
           {
-            category.map((item) => {
+            categoryItems.map((item) => {
               return (
                 <li key={`${item.id}__${item.label}`} className={style.card}>
                   <div className={style.image}>

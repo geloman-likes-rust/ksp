@@ -24,7 +24,7 @@ export default function CategoryPage({ menu, category }: Props) {
       <Head>
         <title></title>
       </Head>
-      <Category menu={menu} category={category} />
+      <Category menu={menu} categoryItems={category} />
     </>
   )
 }
