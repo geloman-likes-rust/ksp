@@ -3,7 +3,6 @@
 }
 
 .grid {
-  outline: 1px solid red;
   justify-content: center;
   display: grid;
   grid-template-columns: repeat(2, 500px);
@@ -28,7 +27,7 @@
   rgba(0, 0, 0, 0.09) 0px 32px 16px;
   overflow: hidden;
   border-radius: 5px;
-  background: #950101;
+  background: #820000;
 }
 
 .card .image {
