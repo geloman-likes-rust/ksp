@@ -2,6 +2,7 @@ import Category from "@/components/pages/category";
 import getCategoryItems from "@/utils/api-call/getCategoryItems";
 import getMenu from "@/utils/api-call/getMenu";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 type Props = {
   category: {
@@ -19,10 +20,13 @@ type Props = {
 }
 
 export default function CategoryPage({ menu, category }: Props) {
+  const { query } = useRouter()
   return (
     <>
       <Head>
-        <title></title>
+        <title>{query.category}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/hotdog.svg" />
       </Head>
       <Category menu={menu} categoryItems={category} />
     </>
