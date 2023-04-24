@@ -50,6 +50,9 @@
   .sidebar {
     display: flex;
   }
+  .item:hover {
+    background: #fff;
+  }
 
   .item .category {
     color: #7F8487;
